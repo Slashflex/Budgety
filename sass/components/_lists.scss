@@ -1,0 +1,105 @@
+.container {
+    width: 100rem;
+    margin: 6rem auto;
+}
+
+.income {
+    float: left;
+    width: 47.5rem;
+    margin-right: 5rem;
+
+    &__title {
+        color: $color-income;
+    }
+}
+
+.expenses {
+    float: left;
+    width: 47.5rem;
+
+    &__title {
+        color: $color-expense;
+    }
+}
+
+.item {
+    padding: 1.3rem;
+    border-bottom: 1px solid $color-subtle-gray;
+    
+    &:first-child {
+        border-top: 1px solid $color-subtle-gray;
+    }
+
+    &:nth-child(even) {
+        background-color: $color-subtle-white;
+    }
+
+    &__description {
+        float: left;
+    }
+    
+    &__value {
+        float: left;
+        transition: transform 0.3s;
+    }
+    
+    &__percentage {
+        float: left;
+        margin-left: 2rem;
+        transition: transform 0.3s;
+        font-size: 1.1rem;
+        background-color: $color-expense-percentage;
+        padding: .3rem;
+        border-radius: .3rem;
+        width: 3.2rem;
+        text-align: center;
+    }
+
+    &__delete {
+        float: left;
+
+        &--btn {
+        font-size: 2.2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        display: none;
+
+            &:focus {
+                outline: none;
+            }
+        
+            &:active {
+                transform: translateY(.2rem);
+            }
+        }   
+    }
+}
+
+.item:hover .item__value {
+    transform: translateX(-20px);
+}
+
+.item:hover .item__percentage {
+    transform: translateX(-20px);
+}
+
+.unpaid {
+    background-color: $color-expense-percentage !important;
+    cursor: pointer;
+    color: $color-expense;
+
+    & .item__percentage {
+        box-shadow: 0 .2rem .6rem 0 rgba($color-black, 0.1);
+    }
+
+    &:hover .item__description {
+        font-weight: 900;
+    }
+}
+
+
+
