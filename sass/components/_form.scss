@@ -1,0 +1,49 @@
+.add {
+    padding: 1.4rem;
+    border-bottom: 1px solid $color-subtle-white;
+    background-color: $color-subtle-white;
+    
+    &__container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__type {
+        width: 5.5rem;
+        border: 1px solid $color-subtle-white;
+        height: 4.4rem;
+        font-size: 1.8rem;
+        color: inherit;
+        background-color: $color-white;
+        margin-right: 1rem;
+        font-weight: 300;
+        transition: border 0.3s;
+    }
+
+    &__description,
+    &__value {
+        border: 1px solid $color-subtle-white;
+        background-color: $color-white;
+        color: inherit;
+        font-family: inherit;
+        font-size: 1.4rem;
+        padding: 1.2rem 1.5rem;
+        margin-right: 1rem;
+        border-radius: .5rem;
+        transition: border 0.3s;
+    }
+
+    &__description {
+        width: 40rem;
+    }
+
+    &__value {
+        width: 10rem;
+    }
+
+    &__type:focus,
+    &__description:focus,
+    &__value:focus {
+        outline: none;
+    }
+}
