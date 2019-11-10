@@ -6,4 +6,4 @@
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Slashflex/Budgety?style=flat-square">
 </p>
 
-> Budget calculation app created using Native Javascript, SASS(scss synthax), 7-1 pattern and BEM methodology. 
+> Budget calculation app created using Native Javascript, SASS(scss synthax), 7-1 pattern and BEM methodology.
