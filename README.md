@@ -47,5 +47,9 @@ npm run build:css
 * Github: [@Slashflex](https://github.com/Slashflex)
 
 ## Result can be seen here
-[Pig Game](https://pig-game-nativejs.netlify.com/)
+
 ## Show your support
+
+Give a ⭐️ if you liked this project !
+
+***
