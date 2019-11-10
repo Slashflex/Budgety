@@ -1,0 +1,67 @@
+.budget {
+    position: absolute;
+    width: 35rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+
+    &__title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: 300;
+    }
+    
+    &__value {
+        font-weight: 300;
+        font-size: 4.6rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        letter-spacing: .2rem;
+    }
+
+    &__income {
+        margin-bottom: 1rem;
+        background-color: $color-income;
+    }
+
+    &__expenses {
+        background-color: $color-expense;
+
+        &--percentage {
+            background-color: rgba($color-gray, 0.2);
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
+
+    &__income,
+    &__expenses {
+        padding: 1.2rem;
+        text-transform: uppercase;
+
+        &--text,
+        &--text {
+            float: left;
+            font-size: 1.3rem;
+            color: $color-gray;
+            margin-top: .2rem;
+        }
+        
+        &--value,
+        &--value {
+            letter-spacing: 1px;
+            float: left;
+        }
+
+        &--percentage,
+        &--percentage {
+            float: left;
+            width: 3.4rem;
+            font-size: 1.1rem;
+            padding: .3rem 0;
+            margin-left: 1rem;
+        }
+    }
+}
