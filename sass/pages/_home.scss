@@ -1,0 +1,12 @@
+.right {
+    float: right;
+}
+
+.red {
+    color: $color-expense !important;
+}
+
+.red-focus:focus {
+    border: 1px solid $color-expense !important;
+}
+
