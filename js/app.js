@@ -5,6 +5,19 @@ var budgetController = (function() {
         this.id = id;
         this.description = description;
         this.value = value;
+        this.percentage = -1;
+    };
+
+    Expense.prototype.calcPercentage = function(totalIncome) {
+        if (totalIncome > 0) {
+            this.percentage = Math.round((this.value / totalIncome) * 100);
+        } else {
+            this.percentage = -1;
+        }
+    };
+
+    Expense.prototype.getPercentage = function() {
+        return this.percentage;
     };
 
     var Income = function(id, description, value) {
@@ -41,7 +54,7 @@ var budgetController = (function() {
 
             // Create new ID
             if (data.allItems[type].length > 0) {
-                ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+                ID = data.allItems[type][data.allItems[type].length -1].id + 1;
             } else {
                 ID = 0;
             }
@@ -86,9 +99,23 @@ var budgetController = (function() {
             if (data.totals.inc > 0) {
                 data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
             } else {
-                data.percentage = - 1;
+                data.percentage = -1;
             }
             
+        },
+
+        calculatePercentages: function() {
+
+            data.allItems.exp.forEach(function(curr) {
+                curr.calcPercentage(data.totals.inc);
+            });
+        },
+
+        getPercentages: function() {
+            var allPerc = data.allItems.exp.map(function(curr) {
+                return curr.getPercentage();
+            });
+            return allPerc;
         },
 
         getBudget: function() {
@@ -238,12 +265,13 @@ var controller = (function(budgetCtrl, UICtrl) {
     var updatePercentages = function() {
 
         // 1. Calculate percentages
-
+        budgetCtrl.calculatePercentages();
 
         // 2. Read percentages from the budget controller
+        var percentages = budgetCtrl.getPercentages();
 
         // 3. Update the UI with the new percentages
-
+        console.log(percentages);
     };
 
     var ctrlAddItem = function() {
