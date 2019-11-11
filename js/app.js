@@ -248,8 +248,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 
             // inc-1
             splitID = itemID.split('-');
-            type = splitID[0];
-            ID = splitID[1];
+            type = splitID[0]; // inc
+            ID = splitID[1];   // ID
 
             // 1. Delete the item from the data structure
 
