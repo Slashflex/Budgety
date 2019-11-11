@@ -101,7 +101,6 @@ var budgetController = (function() {
             } else {
                 data.percentage = -1;
             }
-            
         },
 
         calculatePercentages: function() {
@@ -244,8 +243,6 @@ var UIController = (function() {
                     current.textContent = '---';
                 }
             });
-
-
         },
 
         getDOMStrings: function() {
