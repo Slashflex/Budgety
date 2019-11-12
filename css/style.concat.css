@@ -470,7 +470,7 @@ ORDER : Base + typography > general layout + grid > page layout > components
   padding: 0;
   box-sizing: border-box; }
 
-::after {
+.clearfix::after {
   content: '';
   display: table;
   clear: both; }
@@ -527,6 +527,9 @@ h2 {
 
 .item:hover .item__delete--btn {
   display: block; }
+
+.icon-arrows-circle-remove {
+  font-size: 2rem; }
 
 .add {
   padding: 1.4rem;
